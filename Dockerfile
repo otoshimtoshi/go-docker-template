@@ -1,5 +1,5 @@
 #　v1.23.5
-FROM golang:latest
+FROM golang:1.23-alpine
 
 WORKDIR /app
 
