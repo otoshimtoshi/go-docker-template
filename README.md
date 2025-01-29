@@ -2,7 +2,8 @@
 
 ## ライブラリ
 
-- ホットリロード用：[air-verse/air](https://github.com/air-verse/air)
+- ホットリロード：[air-verse/air](https://github.com/air-verse/air)
+- デバック：[go-delve/delve](https://github.com/go-delve/delve)
 
 ## 環境の起動
 
