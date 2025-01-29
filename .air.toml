@@ -15,7 +15,7 @@ post_cmd = []
 # Binary file yields from `cmd`.
 bin = "tmp/main"
 # Customize binary, can setup environment variables when run your app.
-full_bin = "APP_ENV=dev APP_USER=air ./tmp/main"
+full_bin = "APP_ENV=dev APP_USER=air dlv --listen=:2345 --headless=true --api-version=2 --accept-multiclient exec --continue ./tmp/main"
 # Add additional arguments when running binary (bin/full_bin). Will run './tmp/main hello world'.
 args_bin = ["hello", "world"]
 # Watch these filename extensions.
