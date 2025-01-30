@@ -7,7 +7,6 @@
       "request": "attach",
       "mode": "remote",
       "port": 2345,
-      "host": "localhost",
     }
   ]
 }

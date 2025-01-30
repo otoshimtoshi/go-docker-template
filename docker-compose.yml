@@ -3,7 +3,6 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-    hostname: localhost
     ports:
       - 8080:3000
       - 2345:2345 # リモートデバッグ用
