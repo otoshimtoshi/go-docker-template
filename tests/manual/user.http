@@ -1,0 +1,17 @@
+### 全ユーザー情報を取得する
+GET http://localhost:8080/users
+
+### 特定のユーザー情報を取得する
+GET http://localhost:8080/users/8
+
+### 指定したユーザー情報を登録する
+POST http://localhost:8080/users
+Content-Type: application/json
+
+{
+    "username": "tanaka",
+    "password": "password",
+    "email": "tanaka@example.com",
+    "birthday": "1999-03-14",
+    "image_url": "https://otot.dev/ogp.png"
+}
