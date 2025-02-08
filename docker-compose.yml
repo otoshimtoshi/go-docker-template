@@ -1,5 +1,6 @@
 services:
   api:
+    container_name: go-api
     build:
       context: .
       dockerfile: Dockerfile
@@ -8,3 +9,20 @@ services:
       - 2345:2345 # リモートデバッグ用
     volumes:
       - ./:/app
+
+  db:
+    container_name: go-db
+    image: mariadb:10
+    platform: linux/x86_64
+    ports:
+      - "3306:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: password
+      MYSQL_DATABASE: sample
+      TZ: "Asia/Tokyo"
+    volumes:
+      - sample-db:/var/lib/mysql
+
+volumes:
+  sample-db:
+    driver: local
