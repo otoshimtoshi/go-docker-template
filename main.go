@@ -1,15 +1,12 @@
 package main
 
 import (
-	"fmt"
-	"log"
-	"net/http"
+	"go-docker-template/app/infrastructure"
 )
 
 func main() {
-	http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
-		fmt.Fprintf(w, "Hello, World!")
-	})
-
-	log.Fatal(http.ListenAndServe(":3000", nil))
+	infrastructure.LoadEnv()
+	db := infrastructure.NewDB()
+	r := infrastructure.NewRouting(db)
+	r.Run()
 }
