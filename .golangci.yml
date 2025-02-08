@@ -1,0 +1,28 @@
+linters:
+  enable-all: true
+  disable:
+    - varnamelen # variable name 'x' is too short for the scope of its usage
+    - forbidigo # use of `fmt.Printf` forbidden by pattern `^(fmt\.Print(|f|ln)|print|println)$`
+    - godot # Comment should end in a period
+    - nonamedreturns # named return "xxxx" with type "[]xxxx.xxxx" found
+    - gosmopolitan # string literal contains rune in Han script
+    - wsl # assignments should only be cuddled with other assignments
+    - depguard # package "github.com/xxxx/xxxx" is not allowed
+    - revive
+    - stylecheck
+    - predeclared
+    - gofumpt
+    - gci
+    - exportloopref
+  skip-dirs:
+  # 羅列したディレクトリはlinterが実行されない
+  #  -
+  skip-files:
+  # 羅列したファイルはlinterが実行されない
+  #  -
+linters-settings:
+  # https://github.com/ldez/tagliatelle?tab=readme-ov-file#examples-1
+  tagliatelle:
+    case:
+      rules:
+        json: snake
