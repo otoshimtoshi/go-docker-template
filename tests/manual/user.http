@@ -2,7 +2,7 @@
 GET http://localhost:8080/users
 
 ### 特定のユーザー情報を取得する
-GET http://localhost:8080/users/8
+GET http://localhost:8080/users/1
 
 ### 指定したユーザー情報を登録する
 POST http://localhost:8080/users

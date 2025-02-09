@@ -9,7 +9,8 @@ services:
       - 2345:2345 # リモートデバッグ用
     volumes:
       - ./:/app
-
+    depends_on:
+      - db
   db:
     container_name: go-db
     image: mariadb:10

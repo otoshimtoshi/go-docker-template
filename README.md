@@ -2,8 +2,10 @@
 
 ## Library
 
+- Web フレームワーク：[gin-gonic](https://github.com/gin-gonic/gin)
+- ORM：[go-gorm](https://github.com/go-gorm/gorm)
 - ホットリロード：[air-verse/air](https://github.com/air-verse/air)
-- デバック：[go-delve/delve](https://github.com/go-delve/delve)
+- デバッグ：[go-delve/delve](https://github.com/go-delve/delve)
 
 ## Docker
 

@@ -24,11 +24,10 @@ func main() {
 	}
 }
 
-//nolint:lll
 func openConnection(c *infrastructure.Config) *gorm.DB {
 	db, err := gorm.Open(
 		"mysql",
-		c.DB.Main.Username+":"+c.DB.Main.Password+"@tcp("+c.DB.Main.Host+")/"+c.DB.Main.DBName+"?charset=utf8&parseTime=True&loc=Local")
+		c.DB.Username+":"+c.DB.Password+"@tcp("+c.DB.Host+")/"+c.DB.DBName+"?charset=utf8&parseTime=True&loc=Local")
 	if err != nil {
 		log.Printf("Couldn't establish database connection: %s", err)
 	}
